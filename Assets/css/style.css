@@ -40,7 +40,7 @@
     display: none;
   }
   <!--Hides all links except Home when screen is less tham 768 pixels wide, shows icon link that can open and close topnav-->
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -49,7 +49,7 @@
   }
   
   <!--Displays links vertically on screens less than 768 pixels in width-->
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
