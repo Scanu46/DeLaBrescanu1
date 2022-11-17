@@ -5,8 +5,8 @@
     font-family: 'Lucida Handwriting';
     display: flex;
     justify-content: center;
+}
 
-<!-- Adding dark brown background -->
 .topnav {
     background-color: #633000;
     overflow: hidden;
