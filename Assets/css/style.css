@@ -1,64 +1,109 @@
-.header {
-    background-color: #f1c695;
-    color: #633000;
-    padding: 17px;
-    font-family: 'Lucida Handwriting';
-    display: flex;
-    justify-content: center;
-}
-
-.topnav {
-    background-color: #633000;
-    overflow: hidden;
-  }
-  
-  <!--style links in navbar-->
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f1c695;
-    text-align: center;
-    padding: 18px 20px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap');
+{
+    font-family: 'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
     text-decoration: none;
-    font-size: 20px;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
   }
-  
-  <!--Change colour of links while hovering over-->
-  .topnav a:hover {
-    background-color: #ffffff7a;
-    color: #633000;
+  body{
+    font-family: montserrat;
   }
-  
-  <!--Highlight current page-->
-  .topnav a.active {
-    background-color: #ffffff;
-    color: #633000;
+  nav{
+    background: #2c3e50;
+    height: 80px;
+    width: 100%;
   }
-  
-  <!--Hide link for phones-->
-  .topnav .icon {
+  label.logo{
+    font-family: 'Lucida Handwriting';
+    color: goldenrod;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: goldenrod;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #5d768f;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: goldenrod;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
   }
-  <!--Hides all links except Home when screen is less tham 768 pixels wide, shows icon link that can open and close topnav-->
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
     }
   }
-  
-  <!--Displays links vertically on screens less than 768 pixels in width-->
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
+  @media (max-width: 858px){
+    .checkbtn{
       display: block;
-      text-align: left;
     }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #5d768f;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: goldenrod;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
   }
