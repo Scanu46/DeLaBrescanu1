@@ -3,3 +3,39 @@
     color: #633000;
     padding: 17px;
     font-family: 'Lucida Handwriting';
+    display: flex;
+    justify-content: center;
+
+<!-- Adding dark brown background -->
+.topnav {
+    background-color: #633000;
+    overflow: hidden;
+  }
+  
+  <!--style links in navbar-->
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f1c695;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  <!--Change colour of links while hovering over-->
+  .topnav a:hover {
+    background-color: #ffffff7a;
+    color: #633000;
+  }
+  
+  <--Highlight current page-->
+  .topnav a.active {
+    background-color: #ffffff;
+    color: #633000;
+  }
+  
+  <--Hide link for phones-->
+  .topnav .icon {
+    display: none;
+  }
